@@ -1,33 +1,26 @@
-// import { useTranslations } from "next-intl";
-// import { Link } from "@/i18n/routing";
-
-import LanguageSwitcher from "@/components/common/core/LanguageSwitcher";
-import ThemeSwitcher from "@/components/common/core/ThemeSwitcher";
-import { useTranslations } from "next-intl";
+"use client";
+import SectionContainer from "@/components/common/containers/SectionContainer";
+// import { RootState } from "@/redux/store";
+// import { useSelector } from "react-redux";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
-
+  // const { count } = useSelector((store: RootState) => store.counter.counter);
   return (
-    <div className="container bg-blue-200 dark:bg-slate-950 py-10">
-      <h1 className="text-center">Content Container</h1>
+    <SectionContainer className="bg-blue-200 dark:bg-slate-800 py-10 text-center">
+      <h1>Content Container</h1>
 
-      <p className="font-semibold text-center text-base hidden xl:block">
+      <p className="font-medium text-center text-base hidden xl:block">
         (Large Desktop)
       </p>
-      <p className="font-semibold text-center text-base hidden lg:block xl:hidden">
+      <p className="font-medium text-center text-base hidden lg:block xl:hidden">
         (Desktop)
       </p>
-      <p className="font-semibold text-center text-base hidden md:block lg:hidden">
+      <p className="font-medium text-center text-base hidden md:block lg:hidden">
         (Tablet)
       </p>
-      <p className="font-semibold text-center text-base block md:hidden">
+      <p className="font-medium text-center text-base block md:hidden">
         (Mobile)
       </p>
-      <ThemeSwitcher />
-      <LanguageSwitcher />
-      <h1 className="text-center">{t("title")}</h1>
-      {/* <Link href="/about">{t("about")}</Link> */}
-    </div>
+    </SectionContainer>
   );
 }

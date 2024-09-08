@@ -1,10 +1,10 @@
-import LanguageSwitcher from "@/components/common/core/LanguageSwitcher";
+import SectionContainer from "@/components/common/containers/SectionContainer";
 
 const page = () => {
   return (
-    <div className="text-green-400 text-2xl">
-      <LanguageSwitcher />
-    </div>
+    <SectionContainer className="bg-blue-200 dark:bg-slate-800 py-10 text-center">
+      About Page
+    </SectionContainer>
   );
 };
 

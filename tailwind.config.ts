@@ -10,38 +10,39 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        sm: "320px",  // Small screens (mobile) starting at 320px
-        md: "426px",  // Tablets starting at 426px
-        lg: "1025px", // Desktops starting at 1025px
-        xl: "1441px", // Large desktops starting at 1441px
-        "2xl": "1920px", // Extra large desktops starting at 1920px
+        sm: "320px",  // Small screens (mobile); upto 425
+        md: "426px",  // Tablets upto; 1024
+        lg: "1025px", // Desktops upto; 1440
+        xl: "1441px", // Large desktops; upto 1920
+        "2xl": "1920px", // Extra large desktops
       },
       container: {
         center: true,
-        padding: '1rem',
+        // MIGHT VARY DEPENDING ON PROJECT REQUIREMENTS
         screens: {
-          sm: "82.5vw",     // Fluid up to 320px
-          md: "84.86vw",     // Fluid between 426px and 1024px
-          lg: "870px",    // Fixed for desktops (1025px to 1440px)
-          xl: "988px",    // Fixed for large desktops (1441px to 1920px)
-          "2xl": "988px", // Same for extra large desktops
+          sm: "82.5vw",
+          md: "84.86vw",
+          lg: "870px",
+          xl: "988px",
+          "2xl": "988px",
         },
       },
       fontSize: {
-        xs: ['10px', '14px'],   // Font size: 10px, Line height: 14px
-        sm: ['12px', '16px'],   // Font size: 12px, Line height: 16px
-        md: ['14px', '20px'],   // Font size: 14px, Line height: 20px
-        base: ['16px', '24px'], // Font size: 16px, Line height: 24px
-        lg: ['20px', '28px'],   // Font size: 20px, Line height: 28px
-        xl: ['24px', '32px'],   // Font size: 24px, Line height: 32px
-        '2xl': ['28px', '36px'],// Font size: 28px, Line height: 36px
-        '3xl': ['36px', '36px'],// Font size: 36px, Line height: 36px
-        '4xl': ['46px', '36px'],// Font size: 46px, Line height: 36px
-        '5xl': ['48px', '36px'],// Font size: 48px, Line height: 36px
+        xs: ['0.625rem', '0.875rem'],   // Font size: 10px, Line height: 14px
+        sm: ['0.75rem', '1rem'],        // Font size: 12px, Line height: 16px
+        md: ['0.875rem', '1.25rem'],    // Font size: 14px, Line height: 20px
+        base: ['1rem', '1.5rem'],       // Font size: 16px, Line height: 24px
+        lg: ['1.25rem', '1.75rem'],     // Font size: 20px, Line height: 28px
+        xl: ['1.5rem', '2rem'],         // Font size: 24px, Line height: 32px
+        '2xl': ['1.75rem', '2.25rem'],  // Font size: 28px, Line height: 36px
+        '3xl': ['2.25rem', '2.25rem'],  // Font size: 36px, Line height: 36px
+        '4xl': ['2.875rem', '2.25rem'], // Font size: 46px, Line height: 36px
+        '5xl': ['3rem', '2.25rem'],     // Font size: 48px, Line height: 36px
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#0044FF",
       },
     },
   },

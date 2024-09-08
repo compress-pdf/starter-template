@@ -1,6 +1,15 @@
 {
     "HomePage": {
-        "title": "hej verden!",
-        "about": "Gå til siden om"
+        "title": "Hallo Welt!",
+        "about": "Gehe zur Über-Seite"
+    },
+    "Navbar": {
+        "home": "Startseite",
+        "about": "Über",
+        "contact": "Kontakt"
+    },
+    "Contents": {
+        "mainContainer": "Hauptcontainer",
+        "contentContainer": "Inhaltscontainer"
     }
 }

@@ -2,6 +2,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "../globals.css";
 import { ThemeProvider } from "next-themes";
+import Header from "@/components/common/blocks/Header";
+import Image from "next/image";
+import Footer from "@/components/common/blocks/Footer";
+import ReduxProvider from "../../../providers/redux";
 
 export default async function RootLayout({
   children,
@@ -10,22 +14,52 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <body className="bg-blue-400 dark:bg-slate-500 flex flex-col items-center justify-center w-full">
-        <ThemeProvider attribute="class">
-          <h1 className="text-center py-2">Body</h1>
-          <NextIntlClientProvider messages={messages}>
-            <div className="bg-blue-300 dark:bg-slate-700 max-w-[1920px] mx-auto py-10 w-full">
-              <h1 className="text-center py-2">Main Container</h1>
-              {children}
-            </div>
-          </NextIntlClientProvider>
-        </ThemeProvider>
+      <body className="flex flex-col items-center justify-center w-full">
+        <ReduxProvider>
+          <ThemeProvider attribute="class">
+            <NextIntlClientProvider messages={messages}>
+              <Header />
+              <div className="w-full grid grid-cols-1 xl:grid-cols-[17%_1fr_17%] gap-5">
+                {/* Left ad space - scrollable horizontally if not enough width */}
+                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-start">
+                  <div className="sticky top-[88px] min-w-[320px] h-[800px]">
+                    <Image
+                      alt="xyz"
+                      width={320}
+                      height={640}
+                      src={"https://via.placeholder.com/320x640"}
+                      unoptimized={true}
+                    />
+                  </div>
+                </div>
+
+                {/* Main container with min width of 988px */}
+                <main className="w-full mx-auto min-h-screen px-0 xl:min-w-[51.46vw]">
+                  <h1 className="text-center text-xl py-6">Main Container</h1>
+                  {children}
+                </main>
+
+                {/* Right ad space - scrollable horizontally if not enough width */}
+                <div className="hidden xl:flex overflow-x-clip justify-start">
+                  <div className="sticky top-[88px] min-w-[320px] h-[800px] py-6">
+                    <Image
+                      alt="xyz"
+                      width={320}
+                      height={640}
+                      src={"https://via.placeholder.com/320x640"}
+                      unoptimized={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <Footer />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -6,6 +6,7 @@
   /* Your default theme */
   --background: white;
   --foreground: black;
+  font-size: 16px;
 }
 
 [data-theme="dark"] {

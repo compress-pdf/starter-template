@@ -24,6 +24,7 @@
       "@common/*": ["./src/components/common/*"],
       "@pages/*": ["./src/components/pages/*"],
       // "@ui/*": ["./src/components/ui/*"],
+      "@types/*": ["./src/types/*"],
       "@libs/*": ["./src/libs/*"],
       "@styles/*": ["./src/styles/*"],
       "@utils/*": ["./src/utils/*"],
