@@ -21,7 +21,7 @@ export default async function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system">
             <NextIntlClientProvider messages={messages}>
               <Header />
-              <div className="w-full grid grid-cols-1 xl:grid-cols-[17%_1fr_17%] gap-5">
+              <div className="w-full grid grid-cols-1 xl:grid-cols-[320px_1fr_320px] gap-5">
                 {/* Left ad space - scrollable horizontally if not enough width */}
                 <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-end bg-yellow-50 dark:bg-slate-700">
                   <div className="sticky top-[88px] min-w-[320px] h-[800px]">

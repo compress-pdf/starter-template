@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        sm: "320px",  // Small screens (mobile); upto 425
-        md: "426px",  // Tablets upto; 1024
-        lg: "1025px", // Desktops upto; 1440
-        xl: "1441px", // Large desktops; upto 1920
+        sm: "576px",  // Small screens (mobile); upto 425
+        md: "768px",  // Tablets upto; 1024
+        lg: "1024px", // Desktops upto; 1440
+        xl: "1280px", // Large desktops; upto 1920
         "2xl": "1920px", // Extra large desktops
       },
       container: {
@@ -22,8 +22,8 @@ const config: Config = {
         screens: {
           sm: "82.5vw",
           md: "84.86vw",
-          lg: "870px",
-          xl: "988px",
+          lg: "48.43vw",
+          xl: "48.32vw",
           "2xl": "988px",
         },
       },
