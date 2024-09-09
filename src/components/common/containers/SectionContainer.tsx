@@ -1,6 +1,6 @@
-import { SectionContainerType } from "@/types/SectionContainer";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import { SectionContainerType } from "@/types/SectionContainer";
 
 const SectionContainer = ({ children, className }: SectionContainerType) => {
   return (

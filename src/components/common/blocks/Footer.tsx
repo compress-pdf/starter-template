@@ -1,4 +1,11 @@
+import { Link } from "@/i18n/routing";
 import SectionContainer from "../containers/SectionContainer";
+
+const footerLinks = [
+  { href: "#", label: "Terms & Conditions" },
+  { href: "#", label: "Contact" },
+  { href: "#", label: "Privacy" },
+];
 
 const Footer = () => {
   return (
@@ -7,15 +14,11 @@ const Footer = () => {
         <p className="tracking-wide">© 2024 Starter Template</p>
 
         <ul className="flex gap-4">
-          <li>
-            <a href="#">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-          <li>
-            <a href="#">Privacy</a>
-          </li>
+          {footerLinks.map((link) => (
+            <li key={link.label}>
+              <Link href={link.href}>{link.label}</Link>
+            </li>
+          ))}
         </ul>
       </SectionContainer>
     </footer>

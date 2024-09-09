@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 // -----o----- reducers -----o----- //
-import counterReducer from "./counter/counterReducer";
+import counterReducer from "./counter";
 // -----x----- reducers -----x----- //
 
 const rootReducer = combineReducers({

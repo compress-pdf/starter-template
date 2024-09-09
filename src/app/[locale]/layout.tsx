@@ -6,26 +6,24 @@ import Header from "@/components/common/blocks/Header";
 import Image from "next/image";
 import Footer from "@/components/common/blocks/Footer";
 import ReduxProvider from "../../../providers/redux";
+import { RootLayoutType } from "@/types/Layout";
 
 export default async function RootLayout({
   children,
   params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
+}: RootLayoutType) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className="flex flex-col items-center justify-center w-full">
         <ReduxProvider>
-          <ThemeProvider attribute="class">
+          <ThemeProvider attribute="class" defaultTheme="system">
             <NextIntlClientProvider messages={messages}>
               <Header />
               <div className="w-full grid grid-cols-1 xl:grid-cols-[17%_1fr_17%] gap-5">
                 {/* Left ad space - scrollable horizontally if not enough width */}
-                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-start">
+                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-end">
                   <div className="sticky top-[88px] min-w-[320px] h-[800px]">
                     <Image
                       alt="xyz"
@@ -33,6 +31,7 @@ export default async function RootLayout({
                       height={640}
                       src={"https://via.placeholder.com/320x640"}
                       unoptimized={true}
+                      priority
                     />
                   </div>
                 </div>
@@ -44,14 +43,15 @@ export default async function RootLayout({
                 </main>
 
                 {/* Right ad space - scrollable horizontally if not enough width */}
-                <div className="hidden xl:flex overflow-x-clip justify-start">
-                  <div className="sticky top-[88px] min-w-[320px] h-[800px] py-6">
+                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-start">
+                  <div className="sticky top-[88px] min-w-[320px] h-[800px]">
                     <Image
                       alt="xyz"
                       width={320}
                       height={640}
                       src={"https://via.placeholder.com/320x640"}
                       unoptimized={true}
+                      priority
                     />
                   </div>
                 </div>
