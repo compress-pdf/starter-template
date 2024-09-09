@@ -23,13 +23,14 @@ export default async function RootLayout({
               <Header />
               <div className="w-full grid grid-cols-1 xl:grid-cols-[17%_1fr_17%] gap-5">
                 {/* Left ad space - scrollable horizontally if not enough width */}
-                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-end">
+                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-end bg-yellow-50 dark:bg-slate-700">
                   <div className="sticky top-[88px] min-w-[320px] h-[800px]">
                     <Image
                       alt="xyz"
-                      width={320}
+                      width={300}
                       height={640}
-                      src={"https://via.placeholder.com/320x640"}
+                      className="ml-auto"
+                      src={"https://via.placeholder.com/300x640"}
                       unoptimized={true}
                       priority
                     />
@@ -37,19 +38,19 @@ export default async function RootLayout({
                 </div>
 
                 {/* Main container with min width of 988px */}
-                <main className="w-full mx-auto min-h-screen px-0 xl:min-w-[51.46vw]">
+                <main className="w-full mx-auto min-h-screen px-0 bg-blue-300 dark:bg-slate-700 xl:max-w-[1920px]">
                   <h1 className="text-center text-xl py-6">Main Container</h1>
                   {children}
                 </main>
 
                 {/* Right ad space - scrollable horizontally if not enough width */}
-                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-start">
+                <div className="hidden xl:flex min-h-[800px] overflow-x-clip justify-start bg-yellow-50 dark:bg-slate-700">
                   <div className="sticky top-[88px] min-w-[320px] h-[800px]">
                     <Image
                       alt="xyz"
-                      width={320}
+                      width={300}
                       height={640}
-                      src={"https://via.placeholder.com/320x640"}
+                      src={"https://via.placeholder.com/300x640"}
                       unoptimized={true}
                       priority
                     />
