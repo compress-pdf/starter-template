@@ -15,7 +15,7 @@ describe("Page", () => {
     render(
       <NextIntlClientProvider locale="en-us" messages={messages}>
         <Page />
-      </NextIntlClientProvider>
+      </NextIntlClientProvider>,
     );
 
     // Find the heading element by its role and assert that it is present in the document

@@ -46,7 +46,7 @@ const Hamburger = () => {
         onClick={toggleMenu}
         className={twMerge(
           "transition-all duration-200 ease-in-out z-50 text-white bg-transparent rounded-md focus:outline-none shadow-none hover:bg-transparent",
-          isOpen ? "p-0" : "block p-2 px-1"
+          isOpen ? "p-0" : "block p-2 px-1",
         )}
       >
         <HamburgerOpen />
@@ -57,7 +57,7 @@ const Hamburger = () => {
         ref={sidebarRef}
         className={twMerge(
           "fixed top-0 right-0 h-full w-64 bg-white shadow-lg transition-transform duration-300 ease-in-out transform",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0" : "translate-x-full",
         )}
       >
         <div className="p-4">

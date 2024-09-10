@@ -1,4 +1,4 @@
 export type SectionContainerType = {
-    children: React.ReactNode;
-    className?: string;
+  children: React.ReactNode;
+  className?: string;
 };

@@ -1,4 +1,4 @@
 export type RootLayoutType = {
-    children: React.ReactNode;
-    params: { locale: string };
-}
+  children: React.ReactNode;
+  params: { locale: string };
+};

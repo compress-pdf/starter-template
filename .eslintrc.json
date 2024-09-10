@@ -1,3 +1,17 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "next/typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn", // Optionally track console.log statements
+    "semi": ["error", "always"], // Ensure that semi-colons are used
+    "react/react-in-jsx-scope": "off"
+  }
 }

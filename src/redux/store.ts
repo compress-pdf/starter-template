@@ -5,9 +5,8 @@ import counterReducer from "./counter";
 // -----x----- reducers -----x----- //
 
 const rootReducer = combineReducers({
-  counter: counterReducer
+  counter: counterReducer,
 });
-
 
 const preloadedState = () => {
   try {
