@@ -1,10 +1,11 @@
-import { Link } from "@/i18n/routing";
-import SectionContainer from "../containers/SectionContainer";
+import { Link } from '@/i18n/routing';
+
+import SectionContainer from '../containers/SectionContainer';
 
 const footerLinks = [
-  { href: "#", label: "Terms & Conditions" },
-  { href: "#", label: "Contact" },
-  { href: "#", label: "Privacy" },
+  { href: '#', label: 'Terms & Conditions' },
+  { href: '#', label: 'Contact' },
+  { href: '#', label: 'Privacy' },
 ];
 
 const Footer = () => {
@@ -14,7 +15,7 @@ const Footer = () => {
         <p className="tracking-wide">© 2024 Starter Template</p>
 
         <ul className="flex gap-4">
-          {footerLinks.map((link) => (
+          {footerLinks.map(link => (
             <li key={link.label}>
               <Link href={link.href}>{link.label}</Link>
             </li>

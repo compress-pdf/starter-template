@@ -1,7 +1,7 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
 // -----o----- reducers -----o----- //
-import counterReducer from "./counter";
+import counterReducer from './counter';
 // -----x----- reducers -----x----- //
 
 const rootReducer = combineReducers({
@@ -10,14 +10,16 @@ const rootReducer = combineReducers({
 
 const preloadedState = () => {
   try {
-    if (typeof window === "undefined") return null;
+    if (typeof window === 'undefined') return null;
 
-    const serializedState = localStorage.getItem("reduxState");
+    const serializedState = localStorage.getItem('reduxState');
 
     if (!serializedState) return null;
     else return JSON.parse(serializedState);
   } catch (error) {
-    console.error("Could not load state from localStorage");
+    if (process.env.NODE_ENV !== 'development') {
+      console.error('Could not load state from localStorage');
+    }
     return null;
   }
 };

@@ -1,5 +1,5 @@
 // "use client";
-import SectionContainer from "@/components/common/containers/SectionContainer";
+import SectionContainer from '@/components/common/containers/SectionContainer';
 // import { RootState } from "@/redux/store";
 // import { useSelector } from "react-redux";
 

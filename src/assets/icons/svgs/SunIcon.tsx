@@ -11,13 +11,13 @@ const SunIcon = () => {
       xmlSpace="preserve"
     >
       <circle
-        style={{ fill: "#F2BE3E" }}
+        style={{ fill: '#F2BE3E' }}
         cx="236.966"
         cy="236.966"
         r="236.966"
       />
       <circle
-        style={{ fill: "#F1EB75" }}
+        style={{ fill: '#F1EB75' }}
         cx="236.966"
         cy="236.966"
         r="117.154"

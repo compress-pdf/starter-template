@@ -1,27 +1,20 @@
-"use client";
+'use client';
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { Link } from "@/i18n/routing";
-import SunIcon from "@/assets/icons/svgs/SunIcon";
-import MoonIcon from "@/assets/icons/svgs/MoonIcon";
-import LanguageSwitcher from "../core/LanguageSwitcher";
-import { useTranslations } from "next-intl";
-import Hamburger from "../core/Hamburger";
+import { useTranslations } from 'next-intl'; // External imports
+
+import { Link } from '@/i18n/routing'; // Alias imports
+
+import LanguageSwitcher from '../core/LanguageSwitcher';
+import Hamburger from '../core/Hamburger';
+import ThemeSwitcher from '../core/ThemeSwitcher'; // Relative imports
 
 export default function Navbar() {
-  const { setTheme, theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const t = useTranslations("Navbar");
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const t = useTranslations('Navbar');
 
   const navLinks = [
-    { href: "/", label: t("home") },
-    { href: "/about", label: t("about") },
-    { href: "/contact", label: t("contact") },
+    { href: '/', label: t('home') },
+    { href: '/about', label: t('about') },
+    { href: '/contact', label: t('contact') },
   ];
 
   return (
@@ -40,7 +33,7 @@ export default function Navbar() {
 
             <div className="hidden md:block">
               <div className="flex items-center space-x-2 md:space-x-4">
-                {navLinks.map((link) => (
+                {navLinks.map(link => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -53,15 +46,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-2 items-center">
-              {mounted && (
-                <button
-                  type="button"
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="text-gray-800 dark:text-white rounded-md text-sm font-medium"
-                >
-                  {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-                </button>
-              )}
+              <ThemeSwitcher />
               <LanguageSwitcher />
               <Hamburger />
             </div>

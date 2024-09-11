@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useLocale } from "next-intl";
-// import { usePathname } from "next/navigation";
-import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from 'next-intl';
+
+import { usePathname, useRouter } from '@/i18n/routing';
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
     // router.replace('/about', {locale: newLocale});
 
     // Replacing the current route but changing the locale
-    router.replace(pathname, { locale: newLocale as "en" | "de" | undefined });
+    router.replace(pathname, { locale: newLocale as 'en' | 'de' | undefined });
   };
 
   return (
@@ -27,7 +27,7 @@ export default function LanguageSwitcher() {
         className="rounded-sm bg-transparent px-1 border border-slate-900 dark:border-slate-400"
         title="locale switcher"
       >
-        {["en", "de"].map((loc) => (
+        {['en', 'de'].map(loc => (
           <option
             key={loc}
             value={loc}

@@ -1,5 +1,5 @@
-import SectionContainer from "@/components/common/containers/SectionContainer";
-import { Link } from "@/i18n/routing";
+import SectionContainer from '@/components/common/containers/SectionContainer';
+import { Link } from '@/i18n/routing';
 
 export default function NotFound() {
   return (

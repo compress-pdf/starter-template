@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { notFound } from "next/navigation";
-import { getRequestConfig } from "next-intl/server";
-import { routing } from "./routing";
+import { notFound } from 'next/navigation';
+import { getRequestConfig } from 'next-intl/server';
+
+import { routing } from './routing';
 
 export default getRequestConfig(async ({ locale }: any) => {
   // Validate that the incoming `locale` parameter is valid

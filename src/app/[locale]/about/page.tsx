@@ -1,4 +1,4 @@
-import SectionContainer from "@/components/common/containers/SectionContainer";
+import SectionContainer from '@/components/common/containers/SectionContainer';
 
 const page = () => {
   return (
