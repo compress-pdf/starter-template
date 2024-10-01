@@ -10,22 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        sm: '576px', // Small screens (mobile); upto 425
-        md: '768px', // Tablets upto; 1024
-        lg: '1024px', // Desktops upto; 1440
-        xl: '1280px', // Large desktops; upto 1920
-        '2xl': '1920px', // Extra large desktops
-      },
-      container: {
-        center: true,
-        // MIGHT VARY DEPENDING ON PROJECT REQUIREMENTS
-        screens: {
-          sm: '82.5vw',
-          md: '84.86vw',
-          lg: '48.43vw',
-          xl: '48.32vw',
-          '2xl': '988px',
-        },
+        sm: '375px', // Min-width: 375px (Mobile devices)
+        md: '768px', // Min-width: 768px (Tablets)
+        lg: '1024px', // Min-width: 1024px (Desktops)
+        xl: '1280px', // Min-width: 1280px (Large desktops)
+        '2xl': '1440px', // Min-width: 1440px (Extra large desktops)
+        '3xl': '1820px', // Min-width: 1920px (Ultra large desktops)
       },
       fontSize: {
         xs: ['0.625rem', '0.875rem'], // Font size: 10px, Line height: 14px
