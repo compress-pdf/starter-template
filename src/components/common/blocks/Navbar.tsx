@@ -7,7 +7,7 @@ import { Link } from '@/i18n/routing'; // Alias imports
 import LanguageSwitcher from '../core/LanguageSwitcher';
 import Hamburger from '../core/Hamburger';
 import ThemeSwitcher from '../core/ThemeSwitcher'; // Relative imports
-import SectionContainer from '../containers/SectionContainer';
+import FullAvailableWidthContainer from '../containers/FullAvailableWidthContainer';
 
 export default function Navbar() {
   const t = useTranslations('Navbar');
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <div className="relative w-full">
       <nav className="fixed top-0 w-full bg-blue-100 dark:bg-slate-800 shadow-md z-50 left-0 right-0">
-        <SectionContainer>
+        <FullAvailableWidthContainer>
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
               <Link
@@ -52,7 +52,7 @@ export default function Navbar() {
               <Hamburger />
             </div>
           </div>
-        </SectionContainer>
+        </FullAvailableWidthContainer>
       </nav>
 
       <div className="inline-block mt-14"></div>

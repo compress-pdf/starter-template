@@ -7,6 +7,7 @@ import { ThemeProvider } from 'next-themes';
 import { RootLayoutType } from '@/types/Layout';
 import Header from '@/components/common/blocks/Header';
 import Footer from '@/components/common/blocks/Footer';
+import FullAvailableWidthContainer from '@/components/common/containers/FullAvailableWidthContainer';
 import { SideAd } from '@/components/common/blocks/ads/SideAds';
 
 import ReduxProvider from '../../../providers/redux';
@@ -23,11 +24,12 @@ export default async function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system">
             <NextIntlClientProvider messages={messages}>
               <Header />
-              <div className="w-full grid grid-cols-1 xl:grid-cols-[324px_1fr_324px] 2xl:grid-cols-[320px_1fr_320px] 3xl:grid-cols-[340px_1fr_340px] xl:max-w-[1920px]">
-                <SideAd />
-                {children}
-                <SideAd />
-              </div>
+              <FullAvailableWidthContainer>
+                <div className="flex w-full bg-green-200">
+                  <div className="w-full">{children}</div>
+                  <SideAd />
+                </div>
+              </FullAvailableWidthContainer>
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

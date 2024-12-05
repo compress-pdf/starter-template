@@ -8,7 +8,7 @@ interface ExtendedSectionContainerType extends SectionContainerType {
   id?: string; // Optional
 }
 
-const SectionContainer = ({
+const FullAvailableWidthContainer = ({
   children,
   className,
   as: Component = 'div', // Default to 'div' if not provided
@@ -18,7 +18,7 @@ const SectionContainer = ({
     <Component
       id={id}
       className={twMerge(
-        'w-[85.07vw] md:w-[90.10vw] lg:w-[62.11vw] xl:w-[36.35vw] mx-auto max-w-[698px]',
+        'w-[90.40vw] md:w-[95.31vw] lg:w-[96.48vw] xl:w-[56.77vw] mx-auto max-w-[1090px]',
         className
       )}
     >
@@ -27,4 +27,4 @@ const SectionContainer = ({
   );
 };
 
-export default SectionContainer;
+export default FullAvailableWidthContainer;

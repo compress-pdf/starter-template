@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/routing';
 
-import SectionContainer from '../containers/SectionContainer';
+import FullAvailableWidthContainer from '../containers/FullAvailableWidthContainer';
 
 const footerLinks = [
   { href: '#', label: 'Terms & Conditions' },
@@ -11,7 +11,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer className="bg-blue-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 text-sm w-full py-8 mx-auto">
-      <SectionContainer className="container flex justify-center items-center md:justify-between flex-col md:flex-row text-sm font-normal md:font-semibold">
+      <FullAvailableWidthContainer className="container flex justify-center items-center md:justify-between flex-col md:flex-row text-sm font-normal md:font-semibold">
         <p className="tracking-wide">© 2024 Starter Template</p>
 
         <ul className="flex gap-4">
@@ -21,7 +21,7 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-      </SectionContainer>
+      </FullAvailableWidthContainer>
     </footer>
   );
 };

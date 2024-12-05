@@ -3,15 +3,26 @@ import Image from 'next/image';
 export const SideAd = () => {
   return (
     <div
-      className={`hidden xl:flex min-h-[800px] overflow-x-clip justify-center z-40 bg-green-500 opacity-20`}
+      className={`hidden lg:flex lg:w-[340px] min-h-[800px] overflow-x-clip z-40 bg-green-500 opacity-20 ps-3 flex-col`}
     >
-      <div className="sticky top-[88px] w-max h-[800px]">
+      <div className="sticky top-[88px] w-max h-max">
         <Image
           alt="xyz"
           // className="hidden"
-          width={300}
-          height={640}
-          src={'https://placehold.jp/300x640.png'}
+          width={336}
+          height={280}
+          src={'https://placehold.jp/336x280.png'}
+          unoptimized={true}
+          priority
+        />
+      </div>
+      <div className="sticky top-[calc(88px+280px+12px)] w-max h-max">
+        <Image
+          alt="xyz"
+          // className="hidden"
+          width={336}
+          height={280}
+          src={'https://placehold.jp/336x280.png'}
           unoptimized={true}
           priority
         />
