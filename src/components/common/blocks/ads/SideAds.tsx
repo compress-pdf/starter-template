@@ -3,9 +3,9 @@ import Image from 'next/image';
 export const SideAd = () => {
   return (
     <div
-      className={`hidden lg:flex lg:w-[350px] lg:min-w-[350px] min-h-[800px] overflow-x-clip z-40 bg-green-500 opacity-20 ps-3 flex-col`}
+      className={`hidden lg:flex lg:w-[340px] lg:min-w-[340px] min-h-[800px] overflow-x-clip z-40 bg-green-500 opacity-20 flex-col px-[2px] `}
     >
-      <div className="sticky top-[88px] w-[336px] h-[280px]">
+      <div className="sticky top-[88px] w-[336px] h-[280px] ">
         <Image
           alt="xyz"
           className="w-[336px] h-[280px]"

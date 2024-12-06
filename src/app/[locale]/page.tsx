@@ -20,7 +20,7 @@ export default function HomePage() {
       <p className="font-medium text-center text-base block md:hidden">
         (Mobile)
       </p>
-      <p className="px-2 text-justify text-slate-800 dark:text-slate-400 my-8">
+      <p className=" text-justify text-slate-800 dark:text-slate-400 my-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
         nulla odio natus nam illum animi ex similique deserunt, illo voluptates.
         Nemo rem architecto ipsum vel, dolores voluptates beatae dignissimos

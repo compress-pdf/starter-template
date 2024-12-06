@@ -26,7 +26,7 @@ export default async function RootLayout({
               <Header />
               <FullAvailableWidthContainer>
                 <div className="flex w-full bg-green-200">
-                  <div className="w-full">{children}</div>
+                  <div className="w-full pr-[12px]">{children}</div>
                   <SideAd />
                 </div>
               </FullAvailableWidthContainer>
